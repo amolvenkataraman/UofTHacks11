@@ -2,8 +2,10 @@ const http = require("http");
 const express = require("express");
 const bodyParser = require("body-parser");
 const app = express();
+const cors = require("cors");
 const socketIo = require("socket.io");
 
+app.use(cors());
 
 var PORT = process.env.PORT || 8080;
 
@@ -15,7 +17,9 @@ var urlencodedparser = bodyParser.urlencoded({ extended: false });
 app.use(express.static(__dirname + "/client"));
 
 app.get("/", (req, res) => {
-
+    res.json({
+        message:"Message has been received"
+    });
 });
 
 io.sockets.on("connection", (socket) => {
