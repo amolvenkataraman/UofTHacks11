@@ -2,6 +2,9 @@
 * {
   font-family: 'Open Sans', sans-serif;
   box-sizing: border-box;
+
+  --background: #F8EFBA;
+  --foregound: #000000;
 }
 
 html, body {
