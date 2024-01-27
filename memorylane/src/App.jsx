@@ -16,11 +16,13 @@ function App() {
         </div>
         <div className="page-content">
           <div className="left-pane">
-            <div className="image-container fullwidth">
-              <img className="fullwidth rounded" src="https://plus.unsplash.com/premium_photo-1705418057300-84235e5f265a?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" />
+            <div className="image-container fullwidth shadow">
+              <img className="fullwidth rounded" src="https://www.madebywifi.com/wp-content/uploads/2018/01/internet-for-hackatons-1024x480.jpg" alt="" />
             </div>
-            <div className="hints-container fullwidth ">
-
+            <div className="hints-container fullwidth shadow">
+              <div className="hints fullwidth rounded">
+                 This is a whole bunch of text! This is a whole bunch of text! This is a whole bunch of text!
+              </div>
             </div>
           </div>
           <div className="right-pane">
@@ -35,8 +37,8 @@ function App() {
 
               </div>
             </div>
-            <button className="submit-guess fullwidth rounded">
-
+            <button className="submit-guess fullwidth rounded shadow">
+              Submit!
             </button>
           </div>
         </div>

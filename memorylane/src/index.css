@@ -3,8 +3,10 @@
   font-family: 'Open Sans', sans-serif;
   box-sizing: border-box;
 
-  --background: #F8EFBA;
-  --foregound: #000000;
+  --accent1: #F9E0BB;
+  --accent2: #FFC26F;
+  --accent3: #C38154;
+  --accent4: #884A39;
 }
 
 html, body {
