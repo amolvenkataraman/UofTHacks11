@@ -14,6 +14,7 @@ require('dotenv').config();
 app.use('/Pics', express.static('./Pics'));
 
 let usedPhoto = "";
+let lastPhoto = "";
 
 const config = {
     authRequired: false,
@@ -31,6 +32,13 @@ app.get('/', (req, res) => {
     res.redirect("http://localhost:5173/");
 });
 
+app.get('/curPhoto', (req, res) => {
+    res.json({
+        url: lastPhoto,
+        data: photoInfo[lastPhoto]
+    });
+});
+
 app.get('/newPhoto', (req, res) => {
     if (usedPhoto === "") {
         selectRandomFile().then((filename) => {
@@ -41,6 +49,7 @@ app.get('/newPhoto', (req, res) => {
                 });
             } else {
                 usedPhoto = filename;
+                lastPhoto = filename;
                 res.json({
                     url: filename,
                     data: photoInfo[filename]
