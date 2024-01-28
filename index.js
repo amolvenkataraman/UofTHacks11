@@ -34,6 +34,7 @@ app.get("/", (req, res) => {
     });
 });
 
+// Generate a hint with Cohere AI
 app.get("/hint", (req, res) => {
     var type = req.query.type;
     var level = req.query.level;
