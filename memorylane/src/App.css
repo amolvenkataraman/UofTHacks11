@@ -70,7 +70,7 @@
   }
 }
 
-.input-label {
+.input-label, .score-display {
   color: var(--accent4);
 }
 

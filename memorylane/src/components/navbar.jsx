@@ -4,9 +4,6 @@ function Navbar(prop) {
 			<div className="navbar-badge">
 				MemoryLane
 			</div>
-			<div className="score">
-				Score: { prop.finalScore }
-			</div>
 		</div>
 	)
 }
