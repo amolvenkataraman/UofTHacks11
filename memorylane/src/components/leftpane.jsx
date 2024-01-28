@@ -13,8 +13,8 @@ function LeftPane() {
 	useEffect(() => {
 		async function getImg() {
 			const res = await axios.get("http://localhost:8080/newPhoto", config);
-			const data = await res.data.url;
-			const url = "http://localhost:8080/Pics/" + data;
+			const data = await res.data;
+			const url = "http://localhost:8080/Pics/" + data.url;
 			setImg(url);
 		}
 
@@ -26,9 +26,6 @@ function LeftPane() {
 	return(
 		<div className="left-pane">
 			<div className="image-container orientation fullwidth shadow">
-				<style>
-
-				</style>
 				<img className="orientation fullwidth rounded" src= { img } alt="" />
 			</div>
 			<div className="hints-container fullwidth rounded shadow">
