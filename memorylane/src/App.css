@@ -189,3 +189,10 @@
 .hint-warn {
   font-size: 0.9em;
 }
+
+input, textarea {
+  background-color: var(--accent1);
+  border: 2px solid var(--accent3);
+  color: var(--accent3);
+  font-weight: bold;
+}
