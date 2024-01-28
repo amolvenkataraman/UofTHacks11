@@ -77,7 +77,7 @@ app.get("/hint", (req, res) => {
     if (type == "loc") {
         query = `Mention a few fun facts about the location in the following coordinates: ${hdata}.`;
     } else if (type == "date") {
-        query = `Mention a few fun facts about what happened in: ${hdata}.`;
+        query = `Mention a few fun facts about what happened in the month of the following YYYY-MM-DD date: ${hdata}.`;
     } else {
         res.json({"hint": "ERROR! Invalid hint type requested."});
     }

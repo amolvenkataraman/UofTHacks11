@@ -51,7 +51,7 @@ function RightPane() {
 	}
 
 	function AnswerMarker() {
-		return playing ? <Marker position={ans}></Marker> : null;
+		return !playing ? <Marker position={ans}></Marker> : null;
 	}
 
     function toRad(Value) 
@@ -97,7 +97,7 @@ function RightPane() {
 			setAns([img["data"]["latitude"], img["data"]["longitude"]])
 			setPlaying(false);
 		} else {
-			window,location.reload();
+			window.location.reload();
 		}
 	}
 
