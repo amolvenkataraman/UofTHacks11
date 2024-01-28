@@ -15,7 +15,7 @@ function RightPane() {
 				<div className="map-container fullwidth">
 					<div id="map"></div>
 				</div>
-				<div className="date-selector fullwidth">
+				<div className="date-selector fullwidth rounded shadow">
 					<DatePicker
 						wrapperClassName="datePicker"
 						calendarClassName="cal-stripes"
