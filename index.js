@@ -56,6 +56,39 @@ app.get('/newPhoto', (req, res) => {
     
 });
 
+app.get("/hint", (req, res) => {
+    var type = req.query.type;
+    var level = req.query.level;
+    var hdata = req.query.data;
+
+    var query = "";
+
+    if (type == "loc") {
+        query = `Mention a few fun facts about the location in the following coordinates: ${hdata}.`;
+    } else if (type == "date") {
+        query = `Mention a few fun facts about what happened in: ${hdata}.`;
+    } else {
+        res.json({"hint": "ERROR! Invalid hint type requested."});
+    }
+
+    if (level == "1") {
+        query += " Make the response extremely vague so that it is very hard to pinpoint the exact answer. DO NOT MENTION A CITY NAME, YEAR, MONTH OR DATE!";
+    } else if (level == "2") {
+        query += " Make the response slightly vague so that it is a bit hard to pinpoint the answer. DO NOT MENTION A CITY NAME, YEAR, MONTH OR DATE!";
+    } else {
+        query += " Make the response mostly strightforward, but DO NOT MENTION A CITY NAME, YEAR, MONTH OR DATE!";
+    }
+
+    (async () => {
+        const prediction = await cohere.generate({
+            prompt: query,
+            maxTokens: 100,
+        });
+
+        res.json({"hint": prediction["generations"][0]["text"]});
+    })();
+});
+
 var PORT = process.env.PORT || 8080;
 
 const server = http.Server(app).listen(PORT);
