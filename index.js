@@ -6,11 +6,13 @@ const cors = require("cors");
 const { selectRandomFile, photoInfo } = require('./helper_functions/picSelector.js');
 const { CohereClient } = require("cohere-ai");
 
+require('dotenv').config();
+const { auth } = require('express-openid-connect');
+
 const cohere = new CohereClient({
     token: process.env.COHERE_API_KEY,
 });
-const { auth } = require('express-openid-connect');
-require('dotenv').config();
+
 app.use('/Pics', express.static('./Pics'));
 
 let usedPhoto = "";

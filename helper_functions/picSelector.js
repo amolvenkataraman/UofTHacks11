@@ -12,7 +12,7 @@ var photoInfo = {
     },
     "IMG_20220721_070441198.jpg": {
         latitude: 13.07863500,
-        longitude: -80.26287997,
+        longitude: 80.26287997,
         date: "2022-07-21"
     },
     "IMG_20220723_080024160_HDR.jpg": {
