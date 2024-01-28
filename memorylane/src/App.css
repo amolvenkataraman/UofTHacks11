@@ -115,7 +115,8 @@
 }
 
 .submit-guess {
-  height: 10%;
+  width: 45%;
+  height: 100%;
   margin: 0;
   border: 0;
   background-color: green;
@@ -232,4 +233,20 @@ button {
   background-color: green;
   color: white;
   font-size: 1em;
+}
+
+.bottom-bar {
+  height: 10%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.score-display {
+  width: 45%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4em;
+  background-color: var(--accent2);
 }
