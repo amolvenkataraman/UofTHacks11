@@ -25,10 +25,13 @@ function LeftPane() {
 
 	return(
 		<div className="left-pane">
-			<div className="image-container fullwidth shadow">
-				<img className="fullwidth rounded" src= { img } alt="" />
+			<div className="image-container orientation fullwidth shadow">
+				<style>
+
+				</style>
+				<img className="orientation fullwidth rounded" src= { img } alt="" />
 			</div>
-			<div className="hints-container fullwidth shadow">
+			<div className="hints-container fullwidth rounded shadow">
 				<div className="hints fullwidth rounded">
 					<div className="hints-header">
 						<span className="hints-title">
