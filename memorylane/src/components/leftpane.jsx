@@ -7,7 +7,6 @@ let config = { headers: {
 	'Access-Control-Allow-Origin': '*'}
 }
 
-
 function LeftPane() {
 
 	const [img, setImg] = useState(null);
