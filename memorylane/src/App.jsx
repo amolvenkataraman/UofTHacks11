@@ -10,7 +10,7 @@ function App() {
       <div className="main-content">
         <Navbar />
         <div className="page-content">
-          <LeftPane url = ""/>
+          <LeftPane />
           <RightPane />
         </div>
       </div>
