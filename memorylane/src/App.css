@@ -3,10 +3,26 @@
   height: 100vh;
 }
 
+.orientation {
+  object-fit: contain;
+}
+
 .navbar {
   width: 100vw;
   height: 64px;
   background-color: var(--accent3);
+  display: flex;
+  justify-content: space-between;
+}
+
+.score {
+  background-color: var(--accent1);
+  margin: 10px;
+  margin-bottom: 12px;
+  margin-top: 10px;
+  padding: 5px;
+  border-radius: 5px;
+  font-size: 2em;
 }
 
 .page-content {
