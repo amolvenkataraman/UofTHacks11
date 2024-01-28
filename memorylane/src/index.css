@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Anonymous+Pro:ital,wght@0,400;0,700;1,400;1,700&family=Roboto:ital,wght@0,300;0,400;0,500;1,100&display=swap');
+@import url('https://fonts.cdnfonts.com/css/kitschy-retro');
+
 * {
   font-family: 'Anonymous Pro', sans-serif;
   box-sizing: border-box;
@@ -18,4 +20,10 @@ html, body {
 
 ::-webkit-scrollbar {
   width: 0px;
+}
+
+.navbar-badge {
+  font-family: 'Kitschy Retro', sans-serif;
+  font-size: 3em;
+  margin-left: 20px;
 }
