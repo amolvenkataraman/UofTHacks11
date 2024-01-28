@@ -11,7 +11,7 @@ const cohere = new CohereClient({
 });
 const { auth } = require('express-openid-connect');
 require('dotenv').config();
-app.use('/Pics', express.static('C:/Users/prana/OneDrive/Desktop/Webdev/UofTHacks11/Pics'));
+app.use('/Pics', express.static('./Pics'));
 
 let usedPhoto = "";
 
