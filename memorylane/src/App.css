@@ -31,6 +31,10 @@
   height: 10%;
 }
 
+.datePicker input {
+  font-size: 1.4em;
+}
+
 .cal-stripes {
   .react-datepicker__week:nth-child(2n + 1) {
     background-color: #ffc26f;
@@ -40,10 +44,15 @@
   }
 }
 
+.input-label {
+  color: var(--accent4);
+}
+
 .solution-selectors {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  row-gap: 20px;
 }
 
 .fullwidth {
@@ -100,4 +109,20 @@
   top: 10px;
   left: 10px;
   z-index: 100000;
+}
+
+.map-container {
+  height: 70%;
+  background-color: var(--accent2);
+  padding: 10px;
+}
+
+.map-container .leaflet-container {
+  width: 100px;
+  height: 100px;
+  min-height: 95%;
+  min-width: 100%;
+  display: block;
+  outline: 0;
+  margin-top: 5px;
 }
