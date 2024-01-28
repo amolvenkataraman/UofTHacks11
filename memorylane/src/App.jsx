@@ -27,9 +27,6 @@ function App() {
 
   return (
     <>
-      <div>
-        <button className="floating" onClick={ getResult }>Click Me</button>
-      </div>
       <div className="main-content">
         <Navbar />
         <div className="page-content">
