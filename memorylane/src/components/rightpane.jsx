@@ -55,7 +55,7 @@ function RightPane() {
 				</div>
 			</div>
 			<div className="bottom-bar">
-				<div className="score-display">
+				<div className="score-display rounded shadow">
 					Submit to see your score.
 				</div>
 				<button className="submit-guess rounded shadow">
