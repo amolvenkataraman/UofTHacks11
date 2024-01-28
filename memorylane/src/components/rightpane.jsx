@@ -3,9 +3,6 @@ import DatePicker from "react-datepicker";
 
 import "react-datepicker/dist/react-datepicker.css";
 import { MapContainer, TileLayer, Marker, Popup, useMapEvents } from 'react-leaflet'
-
-// CSS Modules, react-datepicker-cssmodules.css
-// import 'react-datepicker/dist/react-datepicker-cssmodules.css';
 import 'leaflet/dist/leaflet.css';
 
 function RightPane() {
@@ -57,9 +54,14 @@ function RightPane() {
 					/>
 				</div>
 			</div>
-			<button className="submit-guess fullwidth rounded shadow">
-				Submit!
-			</button>
+			<div className="bottom-bar">
+				<div className="score-display">
+					Submit to see your score.
+				</div>
+				<button className="submit-guess rounded shadow">
+					Submit!
+				</button>
+			</div>
 		</div>
 	)
 }
