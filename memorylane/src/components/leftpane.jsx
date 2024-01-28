@@ -2,13 +2,6 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 
-import Image from '/Pics/1.png';
-// import("./Pics/1.png")
-// 	.catch(() => import("./Pics/1.png"))
-// 	.then(() => {
-// 		console.log("lol");
-// });
-
 let config = { headers: {  
 	'Content-Type': 'application/json',
 	'Access-Control-Allow-Origin': '*'}
@@ -49,12 +42,8 @@ function LeftPane() {
 						</div>
 					</div>
 					<div className="hints-body">
-						<textarea name="hintArea" id="hint-area" defaultValue="Any hints you request will appear here." readonly></textarea>
+						<textarea name="hintArea" id="hint-area" defaultValue="Any hints you request will appear here." readOnly></textarea>
 						<span className="input-label hint-warn">Use either of the buttons below to get a hint. Note that using hints will decrease your score.</span>
-						<div className="hint-requests">
-							<button className="hint-request rounded shadow" id="locationHint">Location Hint</button>
-							<button className="hint-request rounded shadow" id="timeHint">Time Hint</button>
-						</div>
 					</div>
 				</div>
 			</div>
