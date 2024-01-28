@@ -38,7 +38,20 @@ function LeftPane() {
 			</div>
 			<div className="hints-container fullwidth shadow">
 				<div className="hints fullwidth rounded">
-						This is a whole bunch of text! This is a whole bunch of text! This is a whole bunch of text!
+					<div className="hints-header">
+						<span className="hints-title">
+							Hints
+						</span>
+						<div className="used-hints">
+							<div className="hint-indicator" id="usedHint1"></div>
+							<div className="hint-indicator" id="usedHint2"></div>
+							<div className="hint-indicator" id="usedHint3"></div>
+						</div>
+					</div>
+					<div className="hints-body">
+						<textarea name="hintArea" id="hint-area" defaultValue="Any hints you request will appear here." readonly></textarea>
+						<span className="input-label hint-warn">Use either of the buttons below to get a hint. Note that using hints will decrease your score.</span>
+					</div>
 				</div>
 			</div>
 		</div>
