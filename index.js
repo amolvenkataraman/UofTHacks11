@@ -43,6 +43,7 @@ app.get('/newPhoto', (req, res) => {
                 usedPhoto = filename;
                 res.json({
                     url: filename,
+                    data: photoInfo[filename]
                 });
             }
         });
@@ -51,6 +52,7 @@ app.get('/newPhoto', (req, res) => {
         usedPhoto = "";
         res.json({
             url: temp,
+            data: photoInfo[temp]
         });
     }
     
