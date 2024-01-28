@@ -33,6 +33,15 @@
 
 .datePicker input {
   font-size: 1.4em;
+  width: 40%;
+  border-radius: 5px;
+  padding: 5px;
+  margin-top: 5px;
+}
+
+.react-datepicker-popper {
+  transform: none;
+  z-index: 9999 !important;
 }
 
 .cal-stripes {
@@ -51,8 +60,9 @@
 .solution-selectors {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  row-gap: 20px;
+  justify-content: top;
+  height: 90%;
+  row-gap: 5%;
 }
 
 .fullwidth {
@@ -73,10 +83,6 @@
 
 .hints-container {
   height: 40%;
-}
-
-.solution-selectors {
-  height: 90%;
 }
 
 .date-selector {
