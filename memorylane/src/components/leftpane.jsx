@@ -8,14 +8,29 @@ let config = { headers: {
 }
 
 function LeftPane() {
-
 	const [img, setImg] = useState(null);
+	const [imgdata, setImgData] = useState(null);
+	const [hintText, setHintText] = useState(null);
+
+	async function getLocationHint() {
+		const res = await axios.get(`http://localhost:8080/hint?type=loc&level=1&data=${imgdata["latitude"], imgdata["longitude"]}`, config);
+		const data = await res.data;
+		setHintText(data["hint"]);
+	}
+
+	async function getDateHint() {
+		const res = await axios.get(`http://localhost:8080/hint?type=date&level=1&data=${imgdata["date"]}`, config);
+		const data = await res.data;
+		setHintText(data["hint"]);
+	}
+
 	useEffect(() => {
 		async function getImg() {
 			const res = await axios.get("http://localhost:8080/newPhoto", config);
 			const data = await res.data;
 			const url = "http://localhost:8080/Pics/" + data.url;
 			setImg(url);
+			setImgData(data.data);
 		}
 
 		if (!img) {
@@ -41,11 +56,11 @@ function LeftPane() {
 						</div>
 					</div>
 					<div className="hints-body">
-						<textarea name="hintArea" id="hint-area" defaultValue="Any hints you request will appear here."></textarea>
+						<textarea name="hintArea" id="hint-area" defaultValue="Any hints you request will appear here." value={hintText}></textarea>
 						<span className="input-label hint-warn">Use either of the buttons below to get a hint. Note that using hints will decrease your score.</span>
 						<div className="hint-requests">
-							<button className="hint-request rounded shadow" id="locationHint">Location Hint</button>
-							<button className="hint-request rounded shadow" id="timeHint">Time Hint</button>
+							<button className="hint-request rounded shadow" id="locationHint" onClick={getLocationHint}>Location Hint</button>
+							<button className="hint-request rounded shadow" id="timeHint" onClick={getDateHint}>Time Hint</button>
 						</div>
 					</div>
 				</div>
