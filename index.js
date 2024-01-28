@@ -7,7 +7,7 @@ const { selectRandomFile, photoInfo } = require('./helper_functions/picSelector.
 const { CohereClient } = require("cohere-ai");
 
 const cohere = new CohereClient({
-    token: "gryst5u7I1r2fITlEoYREe52NG0nSRbOW4MPi3WL",
+    token: process.env.COHERE_API_KEY,
 });
 const { auth } = require('express-openid-connect');
 require('dotenv').config();
