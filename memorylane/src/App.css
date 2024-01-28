@@ -160,11 +160,20 @@
   width: 20px;
   height: 20px;
   border-radius: 50%;
-  background-color: var(--accent3);
+}
+
+#usedHint1 {
+  background-color: green;
+}
+#usedHint2 {
+  background-color: orange;
+}
+#usedHint3 {
+  background-color: red;
 }
 
 .used-hint {
-  background-color: green;
+  background-color: var(--accent3)!important;
 }
 
 #hint-area {
