@@ -3,7 +3,7 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const app = express();
 const cors = require("cors");
-const { selectRandomFile } = require('./helper_functions/picSelector.js');
+const { selectRandomFile, photoInfo } = require('./helper_functions/picSelector.js');
 const { CohereClient } = require("cohere-ai");
 
 const cohere = new CohereClient({
