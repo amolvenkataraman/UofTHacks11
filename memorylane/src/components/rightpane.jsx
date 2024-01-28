@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import DatePicker from "react-datepicker";
 
 import "react-datepicker/dist/react-datepicker.css";
-import { MapContainer, TileLayer, Marker, Popup, useMap } from 'react-leaflet'
+import { MapContainer, TileLayer, Marker, Popup, useMapEvents } from 'react-leaflet'
 
 // CSS Modules, react-datepicker-cssmodules.css
 // import 'react-datepicker/dist/react-datepicker-cssmodules.css';
@@ -11,6 +11,21 @@ import 'leaflet/dist/leaflet.css';
 function RightPane() {
 	const [startDate, setStartDate] = useState(new Date());
 	var position = [43.651070, -79.347015];
+
+	function LocationMarker() {
+		const [position, setPosition] = useState(null)
+		const map = useMapEvents({
+		  click(e) {
+			setPosition(e.latlng)
+		  },
+		})
+	  
+		return position === null ? null : (
+		  <Marker position={position}>
+		  </Marker>
+		)
+	}
+
 	return (
 		<div className="right-pane">
 			<div className="solution-selectors fullwidth">
@@ -23,6 +38,7 @@ function RightPane() {
 						attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
 						url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
 						/>
+						<LocationMarker />
 					</MapContainer>
 				</div>
 				<div className="date-selector fullwidth rounded shadow">
