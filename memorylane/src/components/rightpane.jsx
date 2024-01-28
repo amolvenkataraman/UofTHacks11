@@ -26,21 +26,6 @@ function RightPane() {
 		)
 	}
 
-	function score(d, t) {	// d = distance, t = time
-		const maxScore = 5000;
-
-		const distOne = 20000;
-		const timeOne = 1826;
-		
-		const distC = Math.log(maxScore) / distOne;
-		const timeC = Math.log(maxScore) / timeOne;
-
-		const distScore = Math.exp(-distC * d);
-		const timeScore = Math.exp(-timeC * t);
-
-		return distScore * timeScore * maxScore;
-	}
-
 	return (
 		<div className="right-pane">
 			<div className="solution-selectors fullwidth">
