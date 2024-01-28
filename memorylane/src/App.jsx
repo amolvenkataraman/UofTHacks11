@@ -28,7 +28,7 @@ function App() {
   return (
     <>
       <div>
-        <button onClick={ getResult }>Click Me</button>
+        <button className="floating" onClick={ getResult }>Click Me</button>
       </div>
       <div className="main-content">
         <Navbar />
