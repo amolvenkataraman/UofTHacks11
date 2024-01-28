@@ -4,6 +4,11 @@ const bodyParser = require("body-parser");
 const app = express();
 const cors = require("cors");
 const { selectRandomFile } = require('./helper_functions/picSelector.js');
+const { CohereClient } = require("cohere-ai");
+
+const cohere = new CohereClient({
+    token: "gryst5u7I1r2fITlEoYREe52NG0nSRbOW4MPi3WL",
+});
 const { auth } = require('express-openid-connect');
 require('dotenv').config();
 app.use('/Pics', express.static('C:/Users/prana/OneDrive/Desktop/Webdev/UofTHacks11/Pics'));
