@@ -33,6 +33,7 @@ function RightPane() {
 						wrapperClassName="datePicker"
 						calendarClassName="cal-stripes"
 						dateFormat="yyyy/MM/dd"
+						popperPlacement="top-start"
 						selected={startDate}
 						onChange={(date) => setStartDate(date)}
 						maxDate={new Date()}
