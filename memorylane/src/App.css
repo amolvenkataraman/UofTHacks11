@@ -37,6 +37,7 @@
   border-radius: 5px;
   padding: 5px;
   margin-top: 5px;
+  outline: none;
 }
 
 .react-datepicker-popper {
@@ -129,7 +130,49 @@
   min-height: 95%;
   min-width: 100%;
   display: block;
-  outline: 0;
+  outline: none;
   margin-top: 5px;
   border-radius: 5px;
+}
+
+.hints {
+  padding: 10px;
+}
+
+.hints-header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.hints-title {
+  font-size: 2em;
+}
+
+.used-hints {
+  width: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.hint-indicator {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: var(--accent3);
+}
+
+.used-hint {
+  background-color: green;
+}
+
+#hint-area {
+  width: 100%;
+  height: 150px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  outline: none;
+  border-radius: 5px;
+  resize: none;
 }

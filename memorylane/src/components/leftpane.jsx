@@ -8,7 +8,19 @@ function LeftPane(prop) {
 			</div>
 			<div className="hints-container fullwidth shadow">
 				<div className="hints fullwidth rounded">
-						This is a whole bunch of text! This is a whole bunch of text! This is a whole bunch of text!
+					<div className="hints-header">
+						<span className="hints-title">
+							Hints
+						</span>
+						<div className="used-hints">
+							<div className="hint-indicator" id="usedHint1"></div>
+							<div className="hint-indicator" id="usedHint2"></div>
+							<div className="hint-indicator" id="usedHint3"></div>
+						</div>
+					</div>
+					<div className="hints-body">
+						<textarea name="hintArea" id="hint-area" readonly></textarea>
+					</div>
 				</div>
 			</div>
 		</div>
