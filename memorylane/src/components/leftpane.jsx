@@ -19,7 +19,7 @@ function LeftPane(prop) {
 						</div>
 					</div>
 					<div className="hints-body">
-						<textarea name="hintArea" id="hint-area" defaultValue="Any hints you request will appear here." readonly></textarea>
+						<textarea name="hintArea" id="hint-area" defaultValue="Any hints you request will appear here."></textarea>
 						<span className="input-label hint-warn">Use either of the buttons below to get a hint. Note that using hints will decrease your score.</span>
 						<div className="hint-requests">
 							<button className="hint-request rounded shadow" id="locationHint">Location Hint</button>
