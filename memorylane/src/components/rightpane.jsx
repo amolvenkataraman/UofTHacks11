@@ -1,25 +1,50 @@
 import React, { useState } from "react";
+import { useEffect } from "react";
 import DatePicker from "react-datepicker";
+// import { photoInfo } from '../../../helper_functions/picSelector.js';
+import axios from "axios";
 
 import "react-datepicker/dist/react-datepicker.css";
 import { MapContainer, TileLayer, Marker, Popup, useMapEvents } from 'react-leaflet'
 import 'leaflet/dist/leaflet.css';
 
+
+let config = { headers: {  
+	'Content-Type': 'application/json',
+	'Access-Control-Allow-Origin': '*'}
+}
+
 function RightPane() {
 	const [startDate, setStartDate] = useState(new Date());
 	var position = [43.651070, -79.347015];
 
+	const [img, setImg] = useState(null);
+	useEffect(() => {
+		async function getImg() {
+			const res = await axios.get("http://localhost:8080/curPhoto", config);
+			const data = await res.data;
+			setImg(data);
+		}
+
+		if (!img) {
+			getImg();
+		}
+	}, [img]);
+
+	console.log(img);
+
 	function LocationMarker() {
 		const [position, setPosition] = useState(null)
 		const map = useMapEvents({
-		  click(e) {
-			setPosition(e.latlng)
-		  },
+			click(e) {
+				setPosition(e.latlng)
+			},
 		})
-	  
+
+
 		return position === null ? null : (
-		  <Marker position={position}>
-		  </Marker>
+		<Marker position={position}>
+			</Marker>
 		)
 	}
 
