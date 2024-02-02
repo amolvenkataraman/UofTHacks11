@@ -93,7 +93,7 @@ function RightPane() {
 		if (playing) {
 			var datediff = (startDate - Date.parse(img["data"]["date"])) / (1000 * 3600 * 24);
 			var locdiff = position ? calcCrow(img["data"]["latitude"], img["data"]["longitude"], position.lat, position.lng) : 0;
-			setScore(calculateScore(locdiff, datediff))
+			setScore(calculateScore(Math.abs(locdiff), Math.abs(datediff)))
 			setAns([img["data"]["latitude"], img["data"]["longitude"]])
 			setPlaying(false);
 		} else {
